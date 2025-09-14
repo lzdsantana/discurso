@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Tecnologia e a Obra do Senhor</title>
+    <!-- Inclui o Tailwind CSS para um design responsivo e atraente -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+
+        /* Estilos para a seção de citação */
+        .quote-block {
+            background-color: #ffffff;
+            border-left: 5px solid #10b981;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        /* Estilo para citações com a imagem à direita */
+        .quote-block-right {
+            border-left: none;
+            border-right: 5px solid #10b981;
+        }
+
+        .quote-block p {
+            font-style: italic;
+            color: #4b5563;
+        }
+
+        .quote-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            gap: 2rem;
+        }
+        
+        /* Para variar o lado da imagem */
+        .quote-container-right {
+            flex-direction: row-reverse;
+        }
+
+        /* Contêiner da imagem para garantir o formato circular */
+        .image-wrapper {
+            width: 160px;
+            height: 160px;
+            border-radius: 9999px;
+            border: 4px solid #000080;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilos para a lista de bullet points */
+        ul.list-disc-styled {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+
+        ul.list-disc-styled li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        ul.list-disc-styled li::before {
+            content: "•";
+            color: #10b981;
+            /* Cor do bullet point */
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .quote-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-wrapper {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .quote-container-right {
+                flex-direction: column;
+            }
+        }
+        
+        /* Estilos de animação para os destaques */
+        .highlight-text {
+            display: inline;
+            background-image: linear-gradient(to right, transparent, transparent);
+            background-size: 0% 100%;
+            background-repeat: no-repeat;
+            transition: background-size 0.8s ease-out;
+            font-weight: 400;
+        }
+
+        .highlight-text.visible {
+            background-image: linear-gradient(to right, #fef08a, #facc15);
+            background-size: 100% 100%;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body class="p-4 md:p-8">
+
+    <div class="container mx-auto max-w-4xl bg-white rounded-lg shadow-lg p-6 md:p-10">
+
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">A Tecnologia e a Obra do Senhor</h1>
+            <p class="mt-1 text-sm md:text-base text-gray-500">por Lucas Zaccaro Dias Santana</p>
+        </header>
+
+        <main class="text-base md:text-lg text-gray-700 leading-relaxed">
+
+            <p class="mb-6">Em 4 de abril de 1974, o então profeta Spencer W. Kimball ao falar sobre os esforços que todos nós como a Igreja de Cristo deveríamos fazer para levar a mensagem do Salvador por toda a Terra, proferiu a seguinte profecia:</p>
+
+            <!-- Citação de Spencer W. Kimball -->
+            <div class="quote-container">
+                <div class="text-center">
+                    <div class="image-wrapper">
+                        <img src="https://www.churchofjesuschrist.org/imgs/cc949e8157d44deacbd347028a44d5f1abd5b58f/full/3840%2C/0/default" alt="">
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p>"Sinto que, quando tivermos feito tudo em nosso poder, <span class="highlight-text">o Senhor encontrará um caminho para abrir portas</span>. Essa é a minha fé. (...) Acredito que <span class="highlight-text">o Senhor está ansioso para colocar em nossas mãos invenções das quais nós, leigos, mal tivemos um vislumbre</span>." Se fizermos tudo o que pudermos, e eu aceito minha própria parte nessa responsabilidade, tenho certeza de que <span class="highlight-text">o Senhor trará mais descobertas para o nosso uso</span>."</p>
+                    <div class="text-right mt-4">
+                        <p class="font-bold text-base">— Spencer W. Kimball</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mb-6">Essas palavras proféticas foram proferidas há 51 anos atrás por um profeta de Deus, trouxeram um vislumbre de nossos dias. Talvez, muitos na audiência, ao ouvirem o Profeta falar de invenções, que mal tivemos um vislumbre, ou de descobertas para nosso uso, nunca poderiam imaginar todas as ferramentas incríveis e tecnologias que hoje temos a nossa disposição.</p>
+
+            <p class="mb-6">O Pres. Kimball, continuou:</p>
+
+            <div class="quote-container">
+                <div class="text-center">
+                    <div class="image-wrapper">
+                        <img src="https://www.churchofjesuschrist.org/imgs/cc949e8157d44deacbd347028a44d5f1abd5b58f/full/3840%2C/0/default" alt="">
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p>"O rádio transistor moderno pode ser produzido em massa aos milhares em um tamanho pequeno e barato. Podemos pregar o evangelho a ouvidos e corações ansiosos. O Senhor abençoou o mundo com muitos satélites. Eles estão estacionados no alto dos céus, retransmitindo sinais de transmissão para quase todos os cantos da superfície da Terra. Certamente, esses satélites são apenas o início do que está reservado para o futuro da transmissão mundial."</p>
+                    <div class="text-right mt-4">
+                        <p class="font-bold text-base">— Spencer W. Kimball</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mb-6">Vejam que naquela época, os meios de comunicação estavam começando a evoluir, sendo que o Pres. Kimball dá destaque para rádio, hoje obsoleto, uma vez que podemos ver e ouvir em alta definição uma conferência geral ao vivo, direto dos celulares que estão em nossos bolsos, dispositivos que estão ao alcance de quase qualquer pessoa.</p>
+
+            <p class="mb-6">A profecia do Pres. Kimball foi e está sendo cumprida, hoje a tecnologia permite verdadeiros milagres impulsionados por fibra óptica, bytes, placas de silício e inteligência artificial, <span class="highlight-text">o Senhor realmente cumpriu as palavras do seu servo, o Profeta e entregou em nossas mãos tecnologias que há 51 anos atrás mal se tinha um vislumbre</span>.</p>
+
+            <p class="mb-6">Veja, até mesmo esse discurso eu tive ajuda do GEMINI, a inteligência artificial do Google, onde através de uma conversa, eu pude pesquisar citações, discursos, escrituras e encontrei esse discurso do Pres. Spencer W. Kimball.</p>
+
+            <!-- Citação de Joseph Fielding Smith -->
+            <div class="quote-container">
+                <div class="text-center">
+                    <div class="image-wrapper">
+                        <img src="https://speeches.byu.edu/wp-content/uploads/jpg/Smith_Joseph_Fielding-Web-compressor.jpg" alt="">
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p>"Eu defendo que se não tivesse havido a restauração do evangelho, e nenhuma organização da Igreja de Jesus Cristo dos Santos dos Últimos Dias, não teria havido rádio; não teria havido avião, e não teriam existido as maravilhosas descobertas em medicina, química, eletricidade e as muitas outras coisas pelas quais o mundo foi beneficiado por tais descobertas. Nessas condições, essas bênçãos teriam sido retidas, pois pertencem à Dispensação da Plenitude dos Tempos, da qual a restauração do evangelho e a organização da Igreja constituem o ponto central, do qual irradia o Espírito do Senhor por todo o mundo. A inspiração do Senhor saiu e tomou conta da mente dos homens, embora eles não o saibam, e são dirigidos pelo Senhor. Dessa forma, Ele os traz para o Seu serviço, para que Seus propósitos e Sua retidão, no devido tempo, possam ser supremos na Terra."</p>
+                    <div class="text-right mt-4">
+                        <p class="font-bold text-base">— Joseph Fielding Smith</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mb-6">Lembremos que o Senhor declara em Doutrina e Convênios que todas as coisas são espirituais para Ele. E não tenho dúvidas que todas essas tecnologias são bênçãos de profundidade espiritual para nós e para o avanço da obra do Senhor nessa dispensação da plenitude dos tempos, em preparação para a Segunda Vinda de Cristo e o trabalho do milênio.</p>
+
+            <p class="mb-6">Pensem em como a tecnologia já uma uma ubiquidade na nossa realidade atual da igreja:</p>
+
+            <ul class="list-disc-styled ml-6 mb-6">
+                <li>Uso de smartphones e tablets por missionários para proselitismo, inclusive usando redes sociais.</li>
+                <li>Aplicativos como "Biblioteca do Evangelho" e "Ferramentas do Membro".</li>
+                <li>FamilySearch e o aplicativo Family Tree para a obra do templo.</li>
+                <li>Ferramentas de indexação com inteligência artificial para história da família.</li>
+                <li>Transmissão online de conferências gerais e reuniões de liderança.</li>
+            </ul>
+
+            <p class="mb-6">E tantos outros usos da tecnologia e tenho certeza que o Senhor continuará a nos proporcionar cada vez mais meios tecnológicos para ajudar em sua obra.</p>
+
+            <!-- Citação de Jesus Cristo -->
+            <div class="quote-container quote-container-right">
+                <div class="text-center">
+                    <div class="image-wrapper">
+                        <img src="https://static.wikia.nocookie.net/althistory/images/8/8a/Jesus_Cristo_por_Henrich_Hoffman.jpg/revision/latest/scale-to-width-down/2403?cb=20210926194231&path-prefix=pt" alt="">
+                    </div>
+                </div>
+                <div class="quote-block quote-block-right">
+                    <p>"E ele, respondendo, disse-lhes: Digo-vos que se estes se calarem, <span class="highlight-text">as próprias pedras clamarão</span>."</p>
+                    <div class="text-right mt-4">
+                        <p class="font-bold text-base">— Jesus Cristo</p>
+                        <p class="italic text-sm text-gray-500">(Lucas 19:40)</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mb-6">Então irmãos, atualizando essa citação para os dias atuais, se nós nos calarmos, creio que a Inteligência Artificial clamará e proclamará o evangelho. A obra do Senhor sempre seguirá avante.</p>
+
+            <p class="mb-6">Com certeza. Fiz os ajustes sugeridos para tornar o discurso mais fluído e impactante, mantendo a força da sua mensagem original.</p>
+
+            <!-- Citação de Brigham Young -->
+            <div class="quote-container">
+                <div class="text-center">
+                    <div class="image-wrapper">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCxGjG20T6h8TWosAb42cY2ts8HbOgprrACg&s" alt="">
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p>"Não há mente engenhosa que tenha inventado algo benéfico para a família humana que não o tenha obtido dessa Fonte Única [Deus]. Pois Deus é a fonte da verdade e da sabedoria para todos os seus filhos, seja qual for a sua religião."</p>
+                    <div class="text-right mt-4">
+                        <p class="font-bold text-base">— Brigham Young</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mb-6">Uma vez que resta claro os grandes benefícios da tecnologia, e que sua origem é inclusive divina, ou seja, inspiração divina, existiriam riscos ou malefícios quanto ao uso da tecnologia?</p>
+            <p class="mb-6">Para responder essa pergunta, vou começar com uma analogia, nesse exato momento eu estou usando uma tecnologia, um microfone, se eu falar fora do microfone, minha voz fica baixa e menos potente, se eu falar no microfone, a tecnologia amplia a minha voz e o seu alcance.</p>
+            <p class="mb-6">Percebam que o microfone amplificaria tanto um discurso com uma mensagem do evangelho, quanto amplificaria algum discurso ofensivo ou de ódio.</p>
+            <p class="mb-6">Da mesma forma que esse microfone amplifica e leva mais longe uma boa mensagem, ele pode fazer o mesmo para uma mensagem ruim.</p>
+            <p class="mb-6">Assim é a tecnologia, <span class="highlight-text">ela tem a capacidade de amplificar, dar mais potencial a tudo aquilo que nós temos a oferecer, seja bom ou mau</span>.</p>
+            <p class="mb-6">A tecnologia pode nos ajudar a desenvolver melhores hábitos de saúde, e sono, com aplicativos ou um personal trainer na sua Inteligência Artificial, ou pode nos destruir com o consumo de pornografia ou jogos de azar viciantes com potencial de destruir famílias, com a mesma facilidade do toque de um dedo na tela do celular.</p>
+            <p class="mb-6">Sendo assim, <span class="highlight-text">a tecnologia por si só é neutra, não sendo necessariamente má, a não ser que seja mal utilizada</span>.</p>
+
+            <!-- Citação de Moroni -->
+            <div class="quote-container quote-container-right">
+                <div class="text-center">
+                    <div class="image-wrapper">
+                        <img src="https://www.churchofjesuschrist.org/imgs/82ae65491dfe2a0d8b5555860b3468cd1ddd1682/full/1920%2C/0/default" alt="">
+                    </div>
+                </div>
+                <div class="quote-block quote-block-right">
+                    <p>"Pois eis que o Espírito de Cristo é concedido a todo homem, para que ele possa distinguir o bem do mal; portanto, eu vos mostro o modo de julgar; porque tudo aquilo que vos convida a fazer o bem e a persuadir-vos a acreditar em Cristo é enviado pelo poder e dom de Cristo; e, portanto, podeis saber, com perfeito conhecimento, que é de Deus."</p>
+                    <div class="text-right mt-4">
+                        <p class="font-bold text-base">— Moroni</p>
+                        <p class="italic text-sm text-gray-500">(Moroni 7:16)</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mb-6">A verdade é que o Senhor nos concedeu sermos nossos próprios árbitros, cabe a nós julgar e fazer o bom uso da tecnologia para amplificar e dar mais potência à bondade, à virtude e à retidão através da tecnologia.</p>
+
+            <!-- Citação de Leí -->
+            <div class="quote-container">
+                <div class="text-center">
+                    <div class="image-wrapper">
+                        <img src="https://www.bookofmormonbattles.com/Art/images/Lehi.jpg" alt="">
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p>"Portanto, os homens são livres segundo a carne; e todas as coisas lhes são dadas que são necessárias para o homem. E são livres para escolher a liberdade e a vida eterna por meio do grande Mediador de todos os homens, ou para escolher o cativeiro e a morte, de acordo com o cativeiro e o poder do diabo; pois ele procura tornar todos os homens tão miseráveis como ele próprio é."</p>
+                    <div class="text-right mt-4">
+                        <p class="font-bold text-base">— Leí</p>
+                        <p class="italic text-sm text-gray-500">(2 Néfi 2:27)</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mb-6">Essa escritura poderia ser atualizada, que os homens são livres, e todas as tecnologias lhes são dadas que são necessárias para os homens.</p>
+            <p class="mb-6">Cabe a nós como diz na escritura escolher liberdade ou cativeiro.</p>
+            <p class="mb-6">Afinal <span class="highlight-text">a tecnologia é um amplificador do nosso caráter e um reflexo do que somos</span>. O toque de um dedo na tela de um celular pode nos levar tanto para a liberdade quanto para o cativeiro.</p>
+            <p class="mb-6">Com a mesma tecnologia que podemos hoje estudar através do BYU Pathway para conseguir melhorar as nossas qualificações e assim conseguir melhorar a nossa renda, podemos por outro lado nos viciar em jogos de azar, o famoso tigrinho, e destruir todo o nosso patrimônio.</p>
+            <p class="mb-6">A mesma tecnologia que podemos hoje ler virtual os discursos de todas as conferências gerais já escritos, ter acesso gratuito a todas as escrituras, livros inspiradores para construir pensamentos virtuosos e fortalecer o nosso espírito, pode nos dar acesso fácil à pornografia que irá destruir a nossa virtude e nossos relacionamentos.</p>
+            <p class="mb-6">Com a mesma tecnologia que podemos hoje usar o FamilySearch para encontrar nossos antepassados, nos conectar com a nossa história e nos preparar para a obra do templo, podemos por outro lado passar horas nas redes sociais, nos comparando com a vida perfeita dos outros, o que pode nos levar à ansiedade e à destruição da nossa autoestima.</p>
+            <p class="mb-6">Com a mesma tecnologia que nos permite seguir um plano de nutrição e exercícios com o auxílio de aplicativos, cuidando do nosso corpo que é um templo, podemos por outro lado usar o mesmo celular para consumir séries infinitas e conteúdo trivial, negligenciando nossa saúde, nosso sono e nosso bem-estar físico.</p>
+            <p class="mb-6">A pergunta que devemos nos fazer, então, não é se a tecnologia é boa ou má. <span class="highlight-text">A verdadeira pergunta é: como eu estou usando essa tecnologia?</span> A mesma tecnologia que hoje nos conecta a tudo, pode nos desconectar do mais importante. Pode nos afastar do espírito, do nosso próximo e do nosso propósito.</p>
+            <p class="mb-6">O Senhor nos deu esses dons tecnológicos para que possamos cumprir nossa parte na grande obra dos últimos dias. Não podemos ser passivos diante desse poder. O nosso amado profeta, Presidente Russell M. Nelson, tem nos exortado a abraçar a tecnologia de forma intencional e a usar as redes sociais para compartilhar a nossa fé. Ele nos disse:</p>
+
+            <!-- Citação de Russell M. Nelson -->
+            <div class="quote-container">
+                <div class="text-center">
+                    <div class="image-wrapper">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdnnWb6mwsluHqK5hUvErOx42WGfiRouKpUw&s" alt="">
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p>“Exorto-vos a ser parte da corrente de mensagens no mundo. Compartilhem sua fé e os pensamentos que vocês têm sobre Jesus Cristo. Testifiquem de Seu sacrifício expiatório e de Seu papel em nossa salvação.”</p>
+                    <div class="text-right mt-4">
+                        <p class="font-bold text-base">— Russell M. Nelson</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mb-6">Irmãos, a tecnologia foi colocada em nossas mãos <span class="highlight-text">para sermos discípulos digitais</span>. Para que possamos levar a mensagem da Restauração a lugares onde nossos pés não podem ir. Para que possamos ser os mensageiros, as vozes, que proclamam a verdade.</p>
+            <p class="mb-6">O Senhor nos deu a liberdade para escolher. Ele nos deu as ferramentas e os meios. Ele nos deu o conhecimento. Agora, a obra do Senhor depende de como usamos essas bênçãos.</p>
+            <p class="mb-6">Gostaria de finalizar meu discurso com as palavras do meu apóstolo preferido Paulo, em uma carta aos membros da igreja de Roma:</p>
+
+            <!-- Citação de Paulo -->
+            <div class="quote-container quote-container-right">
+                <div class="text-center">
+                    <div class="image-wrapper">
+                        <img src="https://www.meisterdrucke.pt/kunstwerke/1260px/Rembrandt_van_Rijn_-_Der_Apostel_Paulus_-_%28MeisterDrucke-684568%29.jpg" alt="">
+                    </div>
+                </div>
+                <div class="quote-block quote-block-right">
+                    <p>"E não vos conformeis com este mundo, mas transformai-vos pela renovação do vosso entendimento, para que experimenteis qual seja a boa, agradável e perfeita vontade de Deus."</p>
+                    <p>"Não te deixes vencer pelo mal, mas <span class="highlight-text">vence o mal com o bem</span>."</p>
+                    <div class="text-right mt-4">
+                        <p class="font-bold text-base">— Paulo</p>
+                        <p class="italic text-sm text-gray-500">(Romanos 12:2; 21)</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript para a animação de scroll -->
+    <script>
+        const highlightElements = document.querySelectorAll('.highlight-text');
+
+        const checkVisibility = () => {
+            highlightElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                // Verifica se o elemento está na área visível da tela, com um offset de 150px
+                if (rect.top < window.innerHeight - 150 && rect.bottom > 0) {
+                    el.classList.add('visible');
+                } else {
+                    el.classList.remove('visible');
+                }
+            });
+        };
+
+        // Adiciona os eventos de scroll e redimensionamento da janela
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('resize', checkVisibility);
+
+        // Executa a função na carga inicial da página para checar os elementos visíveis
+        window.addEventListener('load', checkVisibility);
+    </script>
+
+</body>
+
+</html>
